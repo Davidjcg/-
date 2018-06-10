@@ -1,0 +1,5 @@
+import requests
+response = requests.get('https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3902168736,1556323406&fm=58')
+print(response.content)
+with open('C://Users/Administrator/Desktop/jcg.jpg','wb')as f:
+    f.write(response.content)

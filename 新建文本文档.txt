@@ -1,0 +1,13 @@
+readline = 'C:\kaifangX.txt'
+writeline = 'E:\wr.txt'
+readlines = open(readline,'r',encoding = 'gbk',errors = 'ignore')
+writelines = open(writeline,'a',encoding = 'gbk',errors = 'ignore')
+for i in range(10000):
+    try:
+        email = readlines.readline().split(',')[9]
+        print(email)
+        writelines.write(email)
+    except exception as e:
+        print(e)
+readline.close()
+writelines.close()
