@@ -1,0 +1,17 @@
+import re
+content = '''</textarea></div><div id=bottom_container class=s-bottom-ctner>
+<div class="ftCon-Wrapper"> <div class=qrcode-layer>
+<div class="qrcode-item qrcode-item-1">
+<div class=qrcode-img></div><div class=qrcode-text>
+<p><b>手机百度</b></p ><p><span>快人一步</span></p >
+</div> </div><div class="qrcode-item qrcode-item-2">
+<div class=qrcode-img></div><div class=qrcode-text>
+<p><b>百度糯米</b></p ><p><span>我的生活</span></p >
+</div> </div> </div> <div class=no-qrcode-layer>
+<div>
+<p class=lh>
+<a class=sethome href= > 设为首页 </ a></p >
+<span class=copyright-text><span>&#169;2018&nbsp;Baidu&nbsp;</span>< a href=//www.baidu.com/duty/ target=_blank>
+使用百度前必读</ a>&nbsp;'''
+res = re.search('.*?a\shref=(.*)',content,re.S)
+print(res.group(1))
